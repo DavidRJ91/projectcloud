@@ -12,6 +12,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        table, th, td {
+            border: 2px solid black;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -51,27 +56,40 @@
             <br>
             <br>
             <br>
-            <h4 class="display-4" align="center">Buscador de restaurantes en Mallorca</h4>
-            <h4 class="display-5" align="center">Encuentra y opina sobre los mejores restaurantes de Palma de Mallorca</h4>
+            <h4 class="display-4" align="center">Restaurantes en Mallorca</h4>
+            <h4 class="display-5" align="center">Encuentra los mejores restaurantes de Palma de Mallorca</h4>
         </font>
 <div class="row">
 <#if model??>
-    <div class="row center mt-2">
+    <div class="row center mt-1">
         <#list model["list"] as item>
-            <div class="col-md-3">
-                <div class="media mt-5 ml-5">
-                    <img class="align-self-start mr-3 rounded-circle"
-                    <img src="${item.imagen!""}" width="80" height="80"/>
-                    <div class="media-body">
-                        <p><b>Codigo:</b> ${item.codigo!""}</p>
-                        <br>
-                        <p><b>Restaurante:</b></p> <p>${item.nombre!""}</p>
-                        <br>
-                        <p><b>Direccion:</b></p> <p>${item.direccion!""}</p>
-                        <br>
-                        <p><b>Pagina Web:</b></p> <p>${item.web!""}</p>
-                        <br>
-                        <p><b>Telefono:</b></p> <p>${item.telefono!""}</p>
+            <div align="center" class="col-sm-4"/>
+                <br>
+                <br>
+                <div align="center">
+                    <img class="align-self-start mr-1 rounded-circle"
+                    <img src="${item.imagen!""}" width="340" height="240"/>
+                </div>
+                <div>
+                    <br>
+                    <div>
+                        <table>
+                            <tr>
+                                <td><p><b>Codigo de restaurante: </b>${item.codigo!""}</p></td>
+                            </tr>
+                            <tr>
+                                <td><p><b>Restaurante:</b></p><p>${item.nombre!""}</p></td>
+                            </tr>
+                            <tr>
+                                <td><p><b>Direccion:</b></p><p>${item.direccion!""}</p></td>
+                            </tr>
+                             <tr>
+                                <td><p><b>Pagina Web:</b></p><p>${item.web!""}</p></td>
+                             </tr>
+                            <tr>
+                                <td><p><b>Telefono:</b></p> <p>${item.telefono!""}</p></td>
+                             </tr>
+                        </table>
                     </div>
                 </div>
             </div>
