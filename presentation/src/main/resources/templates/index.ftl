@@ -56,8 +56,8 @@
             <br>
             <br>
             <br>
-            <h4 class="display-4" align="center">Restaurantes en Mallorca</h4>
-            <h4 class="display-5" align="center">Encuentra los mejores restaurantes de Palma de Mallorca</h4>
+            <h5 class="display-4" align="center">Restaurantes en Mallorca</h5>
+            <p class="display-5" align="center">Encuentra los mejores restaurantes de Palma de Mallorca</p>
         </font>
 <div class="row">
 <#if model??>
@@ -75,19 +75,19 @@
                     <div>
                         <table>
                             <tr>
-                                <td><p><b>Codigo de restaurante: </b>${item.codigo!""}</p></td>
+                                <td><p><b>Codigo de restaurante: ${item.codigo!""}</b></p></td>
                             </tr>
                             <tr>
-                                <td><p><b>Restaurante:</b></p><p>${item.nombre!""}</p></td>
+                                <td><p><b>Restaurante: ${item.nombre!""}</b></p></td>
                             </tr>
                             <tr>
-                                <td><p><b>Direccion:</b></p><p>${item.direccion!""}</p></td>
+                                <td><p><b>Direccion: ${item.direccion!""}</b></p></td>
                             </tr>
                              <tr>
-                                <td><p><b>Pagina Web:</b></p><p>${item.web!""}</p></td>
+                                <td><p><b>Pagina Web: ${item.web!""}</b></p></td>
                              </tr>
                             <tr>
-                                <td><p><b>Telefono:</b></p> <p>${item.telefono!""}</p></td>
+                                <td><p><b>Telefono: ${item.telefono!""}</b></p></td>
                              </tr>
                         </table>
                     </div>
