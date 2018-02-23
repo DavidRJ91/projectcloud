@@ -17,21 +17,22 @@
 		
 ## Módulo Presentation
   - Carpeta Java
-                - config
+                - Config
 			- MvcConfig
 			- SecurityConfig
 			- StartConfig
-	        - controller
+	        - Controller
 			- HomeController
 			- RestaurantsController
-	        - security
+	        - Security
 			- CustomBasicAuthenticationEntryPoint
 			- SecurityWebApplicationInitializer
 	- Application
-		
+	
    - Templates
 		- index.ftl
 		- login.html
+		
   application.yml
 
 
