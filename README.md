@@ -16,23 +16,26 @@
 			- User
 		
 ## Módulo Presentation
-  - Carpeta Java
-                - Config
-			- MvcConfig
-			- SecurityConfig
-			- StartConfig
-	        - Controller
-			- HomeController
-			- RestaurantsController
-	        - Security
-			- CustomBasicAuthenticationEntryPoint
-			- SecurityWebApplicationInitializer
-	- Application
+- Carpeta Java
+
+  - Config
+	- MvcConfig
+	- SecurityConfig
+	- StartConfig
 	
-   - Templates
-		- index.ftl
-		- login.html
-		
+  - Controller
+	- HomeController
+	- RestaurantsController
+	
+  - Security
+	- CustomBasicAuthenticationEntryPoint
+	- SecurityWebApplicationInitializer
+	
+  - Application
+	
+  - Templates
+	- index.ftl
+	- login.html	
   application.yml
 
 
