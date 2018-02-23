@@ -35,8 +35,9 @@
 	
   - Templates
 	- index.ftl
-	- login.html	
-  application.yml
+	- login.html
+	
+  - application.yml
 
 
 ```
