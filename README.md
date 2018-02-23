@@ -3,7 +3,7 @@
 ## Estructura de mi proyecto
 
 ## Módulo Core
-	- Carpeta Java
+   - Carpeta Java
 		- Base
 			- DBObject
 			- IDatabaseActions
@@ -15,8 +15,8 @@
 			- ReviewItem
 			- User
 		
-Módulo Presentation
-	- Carpeta Java
+## Módulo Presentation
+  - Carpeta Java
 		- config
 			- MvcConfig
 			- SecurityConfig
@@ -29,9 +29,9 @@ Módulo Presentation
 			- SecurityWebApplicationInitializer
 	- Application
 		
-	- Templates
+   - Templates
 		- index.ftl
 		- login.html
-applic
+  application.yml
 
 
