@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <!-- Version Modelo -->
     <modelVersion>4.0.0</modelVersion>
 
+   <!-- Datos del proyecto -->
     <groupId>com.iesemilidarder.projectcloud</groupId>
     <artifactId>projectcloud</artifactId>
-    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+   <!-- Modo empaquetado -->
+    <packaging>pom</packaging>
 
+   <!-- Indicamos que el "padre" es Spring Boot, que es el framework fundamental -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -19,12 +23,14 @@
         <java.version>1.8</java.version>
     </properties>
 
+  <!-- Modulos de los que consta el proyecto -->
     <modules>
         <module>core</module>
         <module>presentation</module>
     </modules>
 
     <profiles>
+             <!-- Perfil de Openshift, que lo necesito para el despliege en Openshift -->
         <profile>
             <!-- When built in OpenShift the openshift profile will be used when invoking  mvn. -->
             <!-- Use this profile for any OpenShift specific customization your app  will need. -->
@@ -35,10 +41,14 @@
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
+                            
+                        <!-- Plugin de archivos WAR de Maven -->
                         <artifactId>maven-war-plugin</artifactId>
                         <version>3.2.0</version>
                         <configuration>
+                                 <!-- Directiorio de salida -->
                             <outputDirectory>target</outputDirectory>
+                                 <!-- Nombre del WAR, le ponemos ROOT para que se despliege en la raiz -->
                             <warName>ROOT</warName>
                             <failOnMissingWebXml>false</failOnMissingWebXml>
                         </configuration>
@@ -47,7 +57,7 @@
             </build>
         </profile>
     </profiles>
-
+     <!-- Repositorios para Spring -->
     <repositories>
         <repository>
             <id>spring-releases</id>
