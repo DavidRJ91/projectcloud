@@ -2,23 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- Indica el padre del modulo -->
     <parent>
         <artifactId>projectcloud</artifactId>
         <groupId>com.iesemilidarder.projectcloud</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
+ <!-- Version del modulo -->
     <modelVersion>4.0.0</modelVersion>
+ <!-- Modo de empaquetado -->
     <packaging>war</packaging>
+ <!-- Artifact Id -->
     <artifactId>presentation</artifactId>
 
     <dependencies>
-
+         <!-- Dependendia de Spring Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+         
+         <!-- Dependencia de Spring, para iniciar el modulo de testing en Spring -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -29,36 +33,42 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-
+         
+        <!-- Dependencia que inicia Spring Security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
+        <!-- Implementar JsonPath en Java -->
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
 
+        <!-- Dependencia de Freemarker-->
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
             <version>2.3.23</version>
         </dependency>
 
+        <!-- Importar el entorno del framework Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
             <version>${spring.version}</version>
         </dependency>
 
+       <!-- Dependencia par la implementacion de Servlets -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
         </dependency>
-
+         
+       <!-- Dependencia del Modulo Core, logica del proyecto -->
         <dependency>
             <groupId>com.iesemilidarder.projectcloud</groupId>
             <artifactId>core</artifactId>
@@ -70,9 +80,9 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 
+ <!-- Para el build con Spring Boot -->
     <build>
         <plugins>
             <plugin>
@@ -96,7 +106,6 @@
                 </configuration>
             </plugin>
         </plugins>
-
     </build>
 
 </project>
